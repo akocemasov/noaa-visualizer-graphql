@@ -3,14 +3,14 @@ import type { KpData } from './types'
 
 export const typeDefs = `#graphql
     type KpData {
-        time_tag: String!
-        kp_index: Int!
-        estimated_kp: Float!
-        kp: String!
+        time_tag: String
+        kp_index: Int
+        estimated_kp: Float
+        kp: String
     }
 
     type Query {
-        noaaKpData: [KpData!]!
+        noaaKpData: [KpData]
     }
 `
 

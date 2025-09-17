@@ -23,9 +23,7 @@ import {
 
 export interface KpData {
     time_tag: string
-    kp_index: number
     estimated_kp: number
-    kp: string
 }
 
 interface ChartCardProps {
@@ -135,6 +133,16 @@ export default function ChartCard({ title, data }: ChartCardProps) {
                                     formatter={(val: number) => [
                                         `Estimated Kp: ${val.toFixed(2)}`,
                                     ]}
+                                    contentStyle={{
+                                        backgroundColor:
+                                            theme.palette.bgTooltip,
+                                        color: theme.palette.textTooltip,
+                                        border: `1px solid ${theme.palette.divider}`,
+                                        borderRadius: 4,
+                                    }}
+                                    itemStyle={{
+                                        color: theme.palette.textTooltip,
+                                    }}
                                 />
 
                                 <Line
